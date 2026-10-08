@@ -1,0 +1,17 @@
+name: Packaging or validation bug / 安装与校验问题
+description: Report a broken installation path, missing file, or validation error.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Include the command, expected result, actual output, and skill commit. Redact secrets and personal paths.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: Operating system, Python version if relevant, and Codex surface.

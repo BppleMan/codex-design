@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="660" viewBox="0 0 1600 660" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Design — Shape the product. Then build it.</title>
+  <desc id="desc">A warm editorial banner with a desktop prototype, a mobile simulator and three steps: understand, simulate, refine.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#e9e5dd" stroke-width="1"/></pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#272b29" flood-opacity=".08"/></filter>
+    <clipPath id="round"><rect width="1600" height="660" rx="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="1600" height="660" fill="#f6f4ee"/>
+    <rect x="740" width="860" height="660" fill="url(#grid)"/>
+    <circle cx="1514" cy="63" r="238" fill="#e3ebdd"/>
+    <circle cx="985" cy="686" r="247" fill="#ece6da"/>
+    <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+      <g transform="translate(76 64)">
+        <rect width="42" height="42" rx="12" fill="#243d36"/>
+        <path d="M12 13h18v16H12zM12 18h18M18 18v11" fill="none" stroke="#f5f4ed" stroke-width="1.6" stroke-linejoin="round"/>
+        <text x="58" y="28" font-size="20" font-weight="600" fill="#334b42" letter-spacing="2">AN OPEN-SOURCE CODEX SKILL</text>
+      </g>
+      <text x="72" y="237" font-size="82" font-weight="700" fill="#223c33" letter-spacing="-4">Codex Design</text>
+      <text x="76" y="310" font-size="36" font-weight="500" fill="#354b42" letter-spacing="-1">Shape the product.</text>
+      <text x="76" y="357" font-size="36" font-weight="500" fill="#354b42" letter-spacing="-1">Then build it.</text>
+      <text x="78" y="416" font-size="21" fill="#6d766c">Ideas → interactive prototypes → clear boundaries.</text>
+      <g transform="translate(76 503)" font-size="17" font-weight="500">
+        <rect width="151" height="44" rx="22" fill="#e4eade"/>
+        <text x="75" y="28" text-anchor="middle" fill="#3c5b49">Mock first</text>
+        <rect x="163" width="202" height="44" rx="22" fill="#e9e5da"/>
+        <text x="264" y="28" text-anchor="middle" fill="#68634f">Human in the loop</text>
+        <rect x="377" width="156" height="44" rx="22" fill="#ecded1"/>
+        <text x="455" y="28" text-anchor="middle" fill="#9a6648">Visual craft</text>
+      </g>
+      <g filter="url(#shadow)">
+        <rect x="816" y="127" width="628" height="394" rx="20" fill="#fffefa" stroke="#dddcd3" stroke-width="2"/>
+        <path d="M836 127H1424Q1444 127 1444 147V171H816V147Q816 127 836 127Z" fill="#eeeee7"/>
+        <g fill="#b3b9aa"><circle cx="840" cy="149" r="5"/><circle cx="856" cy="149" r="5"/><circle cx="872" cy="149" r="5"/></g>
+        <text x="1116" y="154" font-size="12" fill="#81897b" text-anchor="middle" letter-spacing="2">YOUR PRODUCT, TAKING SHAPE</text>
+        <path d="M953 171V521" stroke="#ebece4"/>
+        <rect x="837" y="199" width="92" height="12" rx="6" fill="#45634f"/>
+        <rect x="837" y="239" width="93" height="32" rx="8" fill="#e5edde"/>
+        <rect x="852" y="251" width="52" height="7" rx="3" fill="#859b78"/>
+        <rect x="847" y="291" width="65" height="7" rx="3" fill="#d1d5c9"/>
+        <rect x="847" y="328" width="54" height="7" rx="3" fill="#d1d5c9"/>
+        <text x="981" y="215" font-size="12" font-weight="600" letter-spacing="2" fill="#94a18a">WORKSPACE</text>
+        <text x="981" y="250" font-size="25" font-weight="600" fill="#324e3d">A little more clarity.</text>
+        <rect x="981" y="269" width="262" height="7" rx="3" fill="#d5d9ce"/>
+        <g>
+          <rect x="981" y="302" width="192" height="147" rx="12" fill="#eff3e9"/>
+          <rect x="1000" y="321" width="36" height="36" rx="10" fill="#d8e3cb"/>
+          <path d="M1011 332h13v14h-13zM1015 337h6M1015 341h6" fill="none" stroke="#6a865a" stroke-width="1.5"/>
+          <rect x="1000" y="375" width="119" height="10" rx="5" fill="#79956a"/>
+          <rect x="1000" y="397" width="141" height="6" rx="3" fill="#cad6bf"/>
+          <rect x="1000" y="415" width="92" height="6" rx="3" fill="#cad6bf"/>
+        </g>
+        <g>
+          <rect x="1187" y="302" width="192" height="147" rx="12" fill="#f6eee4"/>
+          <rect x="1206" y="321" width="36" height="36" rx="10" fill="#e9d8be"/>
+          <path d="M1217 335h14M1217 341h10M1217 347h6" stroke="#ac865b" stroke-width="2" stroke-linecap="round"/>
+          <rect x="1206" y="375" width="102" height="10" rx="5" fill="#b59975"/>
+          <rect x="1206" y="397" width="141" height="6" rx="3" fill="#e2d5c1"/>
+          <rect x="1206" y="415" width="88" height="6" rx="3" fill="#e2d5c1"/>
+        </g>
+      </g>
+      <g filter="url(#shadow)" transform="translate(1330 308) rotate(7)">
+        <rect width="171" height="278" rx="28" fill="#2b4439"/>
+        <rect x="6" y="6" width="159" height="266" rx="22" fill="#fcfbf7"/>
+        <rect x="55" y="13" width="61" height="13" rx="6.5" fill="#2b4439"/>
+        <text x="20" y="66" font-size="16" font-weight="600" fill="#3b5645">On your terms.</text>
+        <rect x="19" y="84" width="132" height="76" rx="12" fill="#e8eee0"/>
+        <circle cx="43" cy="108" r="9" fill="#b6c9a2"/>
+        <rect x="62" y="103" width="63" height="6" rx="3" fill="#859c72"/>
+        <rect x="34" y="133" width="98" height="6" rx="3" fill="#bdcbb1"/>
+        <rect x="19" y="174" width="132" height="9" rx="4" fill="#e3e4d9"/>
+        <rect x="19" y="194" width="93" height="7" rx="3" fill="#e3e4d9"/>
+        <rect x="19" y="223" width="132" height="29" rx="9" fill="#c17450"/>
+        <text x="85" y="242" font-size="11" font-weight="600" text-anchor="middle" fill="#fffaf4">MAKE IT TANGIBLE</text>
+      </g>
+      <g transform="translate(910 70)">
+        <rect width="411" height="37" rx="18.5" fill="#fffdf9" stroke="#dddcd3"/>
+        <circle cx="22" cy="18" r="4" fill="#b87350"/>
+        <text x="39" y="24" font-size="13" font-weight="500" fill="#6b7367" letter-spacing=".3">UNDERSTAND   /   SIMULATE   /   REFINE</text>
+      </g>
+    </g>
+  </g>
+</svg>

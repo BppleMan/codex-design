@@ -1,0 +1,23 @@
+name: Workflow feedback / 工作流反馈
+description: Share a concrete case where the skill helped or missed the mark.
+title: "[Workflow]: "
+body:
+  - type: textarea
+    id: intent
+    attributes:
+      label: User intent / 用户意图
+      description: What were you trying to define or design? An idea is enough; a repository is not required.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Actual and expected behavior / 实际与预期
+      description: Include an anonymized excerpt or concrete interaction. Remove private information.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment and evidence / 环境与证据
+      description: Skill commit, available browser/question tools, and any relevant screenshots or checks. State what was actually verified.
