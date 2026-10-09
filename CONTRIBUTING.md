@@ -14,7 +14,7 @@ Keep project-specific choices in examples. A successful color palette, framework
 
 - Keep `SKILL.md` concise. Put conditional detail in linked references.
 - Preserve the workflow: understand intent, judge whether clarification is needed (honoring explicit requests for deeper questioning), use a single mock Web project, involve the user throughout, refine visuals, and capture the product boundary.
-- Keep the synchronous-question rule and ordinary-message fallback intact. Do not introduce asynchronous question callbacks or polling as a substitute.
+- Preserve native question forms and reliable waiting. Select allowed tools from their live contracts; asynchronous forms must not be dismissed by an immediate final response. Do not infer UI availability from a mode label.
 - Reuse the host browser's annotation tools. A request for feedback does not imply permission to build a separate annotation product.
 - Distinguish code checks, browser evidence, user approval, and native-platform validation.
 - Update both READMEs when public usage changes. Chinese is currently the instruction language; contributions in either English or Chinese are welcome.
@@ -50,7 +50,7 @@ By submitting a contribution, you agree to license it under this repository's [A
 
 欢迎提交真实使用中的问题：说明用户想做什么、Skill 实际做了什么、预期是什么，以及差异为什么重要。请使用匿名化记录和最小案例，不上传客户私有内容、凭据或个人信息。
 
-修改尽量聚焦。核心规则写在 `SKILL.md`，条件性细节放在有链接的参考文档里。保留同步提问、内置浏览器批注、单个 Web mock 项目、用户持续参与和产品边界交付；不要把单个项目的配色、技术栈或业务规则泛化为所有任务的默认值。
+修改尽量聚焦。核心规则写在 `SKILL.md`，条件性细节放在有链接的参考文档里。保留原生提问与可靠等待、内置浏览器批注、单个 Web mock 项目、用户持续参与和产品边界交付；不要把单个项目的配色、技术栈或业务规则泛化为所有任务的默认值。
 
 更新面向用户的流程时，同步修改中英文 README。运行上方校验命令；涉及行为的变更，还需提供隔离情境下的实际演练结果，区分结构检查、浏览器验证、用户确认和真实平台验收。
 
