@@ -20,7 +20,7 @@ Codex Design 是一个 **Codex Skill**，用于理解意图、分轮追问、构
 
 起点可以是一个火花、一个问题、已有原型或代码。不要求完整 PRD、现有仓库、特定模型、思考档位或前端技术栈。
 
-本仓库提供工作指令、参考资料和产品定义模板，**不包含可直接运行的原型或 starter app**；Skill 会指导 Codex 为你的产品建立独立 Web 项目。
+本仓库提供工作指令、按需参考资料、产品定义与实现依据模板，以及**可选的 React/TypeScript 可运行底座**。底座在一个本地 Web 工作台中演示反馈收件箱；业务规则与视觉方向应按你的产品替换。
 
 ## 工作方式
 
@@ -77,6 +77,25 @@ git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" pull --ff-only
 
 如果存在本地改动，或 Git 无法快进更新，先检查并保留这些工作，再处理更新。
 
+## 运行原型底座
+
+![Codex Design 原型工作台：macOS 与 iOS 模拟器共享业务状态](docs/images/prototype-workbench.png)
+
+在仓库目录中，使用 Python 3 和 Node.js 24+：
+
+```sh
+python3 scripts/create_prototype.py ../my-prototype --name "我的产品"
+cd ../my-prototype
+npm ci
+npm run dev -- --host 127.0.0.1
+```
+
+初始化命令拒绝覆盖已有目录。打开 Vite 输出的地址，即可比较稳定编号的候选、调整视觉参数、切换模拟场景，并按需联动 Web/macOS/iOS/Android 视图。实验快照与范围确认分别保存；可导出基准 JSON 和实现依据 Markdown，再导入、恢复工作副本，保留原记录。
+
+参见[方法取舍](docs/design-notes.md)与[验证记录](docs/starter-verification.md)。
+
+参阅[底座说明](assets/prototype-starter/README.md)、[贯通示例](examples/feedback-inbox.md)和[交付指南](references/handoff.md)。批注仍使用 Codex 自带能力；底座不依赖 Claude 专用运行时或真实后端。示例访谈回答是演示假设，不是用户确认。
+
 ## 使用示例
 
 **从一个想法开始**
@@ -117,6 +136,10 @@ Bridge Studio 通过联动的 mock 模拟器逐步明确连接、身份、权限
 | [references/visual-and-browser-review.md](references/visual-and-browser-review.md) | 视觉精调与浏览器评审 |
 | [references/lessons-from-bridge-studio.md](references/lessons-from-bridge-studio.md) | 案例证据、反例与限制 |
 | [assets/product-definition.template.md](assets/product-definition.template.md) | 产品定义模板，不是应用脚手架 |
+| [assets/prototype-starter/](assets/prototype-starter/) | 可选的 Web 工作台与可运行示例 |
+| [references/visual-exploration.md](references/visual-exploration.md) | 候选比较、视觉实验与基准 |
+| [assets/implementation-spec.template.md](assets/implementation-spec.template.md) | 对应确认范围的实现依据模板 |
+| [scripts/create_prototype.py](scripts/create_prototype.py) | 安全复制底座到新项目 |
 | [scripts/validate.py](scripts/validate.py) | 仓库校验 |
 | [tests/](tests/) | 校验器测试 |
 
@@ -126,9 +149,13 @@ Bridge Studio 通过联动的 mock 模拟器逐步明确连接、身份、权限
 python3 -m pip install -r requirements-dev.txt
 python3 scripts/validate.py
 python3 -m unittest discover -s tests
+cd assets/prototype-starter
+npm ci
+npm test
+npm run build
 ```
 
-这些检查验证 Skill 仓库本身，不能代替生成原型的浏览器评审。贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+这些检查验证包完整性与底座状态/基准行为，不能代替浏览器评审或用户设计确认。贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可证与致谢
 

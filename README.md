@@ -20,7 +20,7 @@ Codex Design is a **Codex Skill** for understanding intent, asking focused quest
 
 Start with a spark, a problem, an existing prototype, or a codebase. No complete PRD, existing repository, particular model, reasoning level, or frontend stack is required.
 
-This repository contains instructions, reference guides, and a product-definition template. It does **not** bundle a runnable prototype or starter app; the skill guides Codex in creating a separate Web project for your product.
+This repository contains the skill, focused reference guides, product-definition and implementation templates, and an **optional runnable React/TypeScript starter**. The starter demonstrates a feedback inbox in one local Web workbench; adapt its business behavior and visual direction to your product.
 
 ## The workflow
 
@@ -77,6 +77,25 @@ git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" pull --ff-only
 
 If there are local changes or Git cannot fast-forward, inspect and preserve that work before updating.
 
+## Try the runnable starter
+
+![The optional Codex Design workbench with linked macOS and iOS mock views](docs/images/prototype-workbench.png)
+
+From this repository, with Python 3 and Node.js 24+:
+
+```sh
+python3 scripts/create_prototype.py ../my-prototype --name "My product"
+cd ../my-prototype
+npm ci
+npm run dev -- --host 127.0.0.1
+```
+
+The initializer refuses existing destinations. Open the address Vite prints. Compare stable candidates, adjust visual parameters, switch mock scenarios, and optionally link Web/macOS/iOS/Android surfaces. Save experiments separately from reviewed scope confirmations; export baseline JSON and implementation Markdown, then import and restore without overwriting the original record.
+
+See the [verification record](docs/starter-verification.md) and [design notes](docs/design-notes.md).
+
+Read the [starter guide](assets/prototype-starter/README.md), [worked example](examples/feedback-inbox.md), and [handoff guide](references/handoff.md). Browser annotations still come from Codex. The starter uses no Claude-specific runtime or real backend. Its example interview assumptions are illustrative, not user approval.
+
 ## Example prompts
 
 **From an idea**
@@ -117,6 +136,10 @@ This is a historical prototype example, not a bundled app or a universal layout 
 | [references/visual-and-browser-review.md](references/visual-and-browser-review.md) | Visual refinement and browser review |
 | [references/lessons-from-bridge-studio.md](references/lessons-from-bridge-studio.md) | Case evidence, counterexamples, and limits |
 | [assets/product-definition.template.md](assets/product-definition.template.md) | Product-definition template; not an application scaffold |
+| [assets/prototype-starter/](assets/prototype-starter/) | Optional runnable Web workbench and example |
+| [references/visual-exploration.md](references/visual-exploration.md) | Candidate comparisons, experiments and baselines |
+| [assets/implementation-spec.template.md](assets/implementation-spec.template.md) | Implementation evidence tied to a confirmed scope |
+| [scripts/create_prototype.py](scripts/create_prototype.py) | Copy the starter safely into a new project |
 | [scripts/validate.py](scripts/validate.py) | Repository validation |
 | [tests/](tests/) | Validator tests |
 
@@ -126,9 +149,13 @@ This is a historical prototype example, not a bundled app or a universal layout 
 python3 -m pip install -r requirements-dev.txt
 python3 scripts/validate.py
 python3 -m unittest discover -s tests
+cd assets/prototype-starter
+npm ci
+npm test
+npm run build
 ```
 
-These checks validate the skill repository; they do not replace browser review of a generated prototype. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
+These checks validate package integrity and starter state/baseline behavior; they do not replace browser review or user design approval. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
 
 ## License and credits
 

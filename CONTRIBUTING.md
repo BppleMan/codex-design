@@ -31,6 +31,17 @@ python scripts/validate.py
 python -m unittest discover -s tests
 ```
 
+For starter changes, use Node.js 24+ and also run:
+
+```sh
+cd assets/prototype-starter
+npm ci
+npm test
+npm run build
+```
+
+Use `?qa=1` for isolated browser checks. Verify paired views, failure recovery, candidate tweaks, and baseline export/import when they are affected. Keep example review records clearly marked as QA.
+
 Structural checks catch packaging and documentation errors. For behavior changes, also run a realistic scenario in an isolated conversation or workspace and report what the skill actually did. Do not call an imagined walkthrough a live browser test.
 
 By submitting a contribution, you agree to license it under this repository's [Apache-2.0 license](LICENSE).
