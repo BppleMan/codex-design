@@ -14,13 +14,53 @@
 
 # Codex Design
 
-**把想法变成高保真可交互原型，再通过原型共同定义产品。**
+**把你的想法变成高保真可交互原型，再通过原型共同定义产品。**
 
-Codex Design 是一个 **Codex Skill**，用于理解意图、分轮追问、构建 mock 体验，并让用户在浏览器中持续参与完善。核心交付是有真实操作依据的产品定义。
+Codex Design 是一个 **Codex Skill**：理解你的意图，分轮追问关键问题，设计可操作的 mock 原型，再和你一起在浏览器中调整功能与视觉。核心交付是有真实操作依据的产品定义。
 
-起点可以是一个火花、一个问题、已有原型或代码。不要求完整 PRD、现有仓库、特定模型、思考档位或前端技术栈。
+起点可以是一个火花、一个问题、已有原型或代码。不要求完整 PRD、现有仓库、特定模型、思考档位或前端技术栈。产品类型、业务流程、视觉方向和模拟器组合都围绕你的目标确定。
 
-本仓库提供工作指令、按需参考资料、产品定义与实现依据模板，以及**可选的 React/TypeScript 可运行底座**。底座在一个本地 Web 工作台中演示反馈收件箱；业务规则与视觉方向应按你的产品替换。
+## 让 AI 帮你安装
+
+把下面整段提示词复制给能够操作本地文件的 Codex 或 AI agent。安装的目标是当前用户的 **Codex 环境**；使用时需要该环境能够加载本地 Skill，并具备运行和评审 Web 原型的工具。
+
+```text
+请为当前用户实际安装 Codex Design Skill：
+https://github.com/BppleMan/codex-design
+
+仓库根目录就是 Skill 根目录。优先使用当前环境提供的 Skill 安装器；
+否则将完整仓库安装到 Codex 的 skills/codex-design 目录，遵循 CODEX_HOME 配置，
+未配置时使用当前用户的 ~/.codex/skills/codex-design。
+请保留 SKILL.md、agents、references、assets 和 scripts 等配套文件。
+如果目标已存在，先核对来源和本地修改；不要直接覆盖或删除已有安装。
+完成后检查 SKILL.md 及其本地引用，报告实际安装路径、来源和调用方式，
+并说明如何让当前 Codex 环境加载它。遇到权限或环境限制时如实说明，不要声称已完成。
+本次只安装 Skill，不运行附带演示、不安装原型的 npm 依赖，也不开始产品设计。
+```
+
+偏好手动安装或需要更新已有版本时，参阅[安装与更新说明](docs/installation.md)。
+
+## 从你的想法开始
+
+Skill 加载后，直接对 Codex 说：
+
+```text
+使用 $codex-design。
+我的想法是：[用自己的话描述你想做的产品、遇到的问题或一闪而过的点子]。
+先理解我的目标，再分轮 grill-me，追问会影响产品方向的关键问题。
+方向明确后，用 mock 数据做高保真可交互原型，在内置浏览器中让我操作和批注。
+和我一起打磨功能边界与视觉，本轮先不接真实后端。
+```
+
+不需要自己运行示例工程或先选模板。Codex 会根据讨论结果搭建适合这个产品的原型；原型目录、技术栈和模拟器由实际需要决定。
+
+已有原型时，可以说：
+
+> 使用 $codex-design 继续这个原型，保留已经确认的决定，先检查尚未明确的流程和视觉问题，再根据我的批注调整。
+
+确认某个版本并准备实施时，可以说：
+
+> 我确认原型 [版本] 中的 [具体范围]。使用 $codex-design 将这部分转译到正式项目，保持视觉、交互和状态规则，用相同场景对照验证。
 
 ## 工作方式
 
@@ -45,79 +85,6 @@ Codex Design 是一个 **Codex Skill**，用于理解意图、分轮追问、构
 
 Skill 不会在你的产品中另建批注系统。当前环境缺少内置浏览器批注时，使用文字或截图位置承接反馈，并说明该限制。
 
-## 安装
-
-需要能够加载本地 Skill 的 Codex 环境、创建并运行本地 Web 项目的权限，以及适用的前端工具。浏览器评审使用当前环境实际提供的浏览器能力。
-
-**先检查目标目录。** 如果目录已经存在，检查其内容和安装方式，不要覆盖。仅在目标目录尚未使用时运行：
-
-```sh
-git clone https://github.com/BppleMan/codex-design.git "${CODEX_HOME:-$HOME/.codex}/skills/codex-design"
-```
-
-仓库根目录就是 `SKILL.md` 所在位置，无需复制内部子目录。在已加载该 Skill 的 Codex 会话中使用 `$codex-design`。
-
-如果当前环境提供 Skill 安装器，也可以直接提出：
-
-> 从 https://github.com/BppleMan/codex-design 安装这个 Codex Skill。SKILL.md 位于仓库根目录。
-
-### 更新 Git 安装
-
-仅适用于目标目录确实是本仓库 Git 克隆的情况。先检查工作区：
-
-```sh
-git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" status --short
-```
-
-只有工作区干净时才运行：
-
-```sh
-git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" pull --ff-only
-```
-
-如果存在本地改动，或 Git 无法快进更新，先检查并保留这些工作，再处理更新。
-
-## 运行原型底座
-
-![Codex Design 原型工作台：macOS 与 iOS 模拟器共享业务状态](docs/images/prototype-workbench.png)
-
-在仓库目录中，使用 Python 3 和 Node.js 24+：
-
-```sh
-python3 scripts/create_prototype.py ../my-prototype --name "我的产品"
-cd ../my-prototype
-npm ci
-npm run dev -- --host 127.0.0.1
-```
-
-初始化命令拒绝覆盖已有目录。打开 Vite 输出的地址，即可比较稳定编号的候选、调整视觉参数、切换模拟场景，并按需联动 Web/macOS/iOS/Android 视图。实验快照与范围确认分别保存；可导出基准 JSON 和实现依据 Markdown，再导入、恢复工作副本，保留原记录。
-
-参见[方法取舍](docs/design-notes.md)与[验证记录](docs/starter-verification.md)。
-
-参阅[底座说明](assets/prototype-starter/README.md)、[贯通示例](examples/feedback-inbox.md)和[交付指南](references/handoff.md)。批注仍使用 Codex 自带能力；底座不依赖 Claude 专用运行时或真实后端。示例访谈回答是演示假设，不是用户确认。
-
-## 使用示例
-
-**从一个想法开始**
-
-> 使用 $codex-design。我想帮助自由设计师追踪客户反馈。先理解问题，分轮 grill-me，再构建 mock 原型供我们一起评审。本轮不接真实后端。
-
-**继续已有原型**
-
-> 使用 $codex-design 继续这个原型。保留已经确认的决定，检查流程遗漏，追问重要取舍。让我在内置浏览器中操作修改后的界面，并通过批注继续调整。
-
-**从确认原型转入正式实现**
-
-> 我确认原型 v3 中的首次使用和账号设置流程。使用 $codex-design 开始将这些流程转译到现有应用。保留布局、视觉层级、交互和状态行为；验证相同场景，并指出必要的原生平台差异。
-
-## 实际案例
-
-![Bridge Studio 原型：联动的插件与 Desktop 模拟器](docs/images/bridge-studio.jpg)
-
-Bridge Studio 通过联动的 mock 模拟器逐步明确连接、身份、权限和生命周期行为。[案例记录](references/lessons-from-bridge-studio.md)说明了可迁移的方法及其边界。
-
-这是历史原型示例，不是随仓库附带的应用，也不是通用布局模板。截图中如出现自制批注控件，属于较早实现；本 Skill 要求使用 Codex 内置批注。
-
 ## 能力边界
 
 - Mock 行为不能证明真实 API、网络、认证、支付或原生宿主中的行为。
@@ -126,22 +93,16 @@ Bridge Studio 通过联动的 mock 模拟器逐步明确连接、身份、权限
 - 用户明确要求后，才按已确认范围开始业务接入。
 - Skill 不承诺固定生成速度，也不要求特定模型。
 
-## 仓库导航
+## 深入资料
 
-| 路径 | 用途 |
-| --- | --- |
-| [SKILL.md](SKILL.md) | Skill 工作指令与范围边界 |
-| [agents/openai.yaml](agents/openai.yaml) | 展示信息与建议调用方式 |
-| [references/discovery.md](references/discovery.md) | 意图理解与分轮提问 |
-| [references/visual-and-browser-review.md](references/visual-and-browser-review.md) | 视觉精调与浏览器评审 |
-| [references/lessons-from-bridge-studio.md](references/lessons-from-bridge-studio.md) | 案例证据、反例与限制 |
-| [assets/product-definition.template.md](assets/product-definition.template.md) | 产品定义模板，不是应用脚手架 |
-| [assets/prototype-starter/](assets/prototype-starter/) | 可选的 Web 工作台与可运行示例 |
-| [references/visual-exploration.md](references/visual-exploration.md) | 候选比较、视觉实验与基准 |
-| [assets/implementation-spec.template.md](assets/implementation-spec.template.md) | 对应确认范围的实现依据模板 |
-| [scripts/create_prototype.py](scripts/create_prototype.py) | 安全复制底座到新项目 |
-| [scripts/validate.py](scripts/validate.py) | 仓库校验 |
-| [tests/](tests/) | 校验器测试 |
+按需查看[视觉探索](references/visual-exploration.md)、[业务转译](references/handoff.md)与[产品定义模板](assets/product-definition.template.md)。[案例与演示](docs/examples.md)仅说明方法在特定情境中的使用；其中的业务、配色和布局不限定你可以设计的产品。
+
+<details>
+<summary>开发者资料与可选底座</summary>
+
+[Skill 指令](SKILL.md) · [提问方法](references/discovery.md) · [原型底座指南](references/prototype-workbench.md) · [底座源码](assets/prototype-starter/) · [实现依据模板](assets/implementation-spec.template.md) · [方法取舍](docs/design-notes.md) · [验证记录](docs/starter-verification.md)
+
+底座是给 Codex 按需复用的开发素材，普通使用无需手动运行。创建命令与改造点见底座指南；实际产品的业务模型和视觉需根据用户目标设计。
 
 ## 开发与贡献
 
@@ -157,6 +118,8 @@ npm run build
 
 这些检查验证包完整性与底座状态/基准行为，不能代替浏览器评审或用户设计确认。贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
+</details>
+
 ## 许可证与致谢
 
-采用 [Apache-2.0](LICENSE) 许可证。这是由 [BppleMan](https://github.com/BppleMan) 维护、源于 Bridge Studio 原型实践的独立社区项目，并非 OpenAI 官方项目。
+采用 [Apache-2.0](LICENSE) 许可证。由 [BppleMan](https://github.com/BppleMan) 维护的独立社区项目，并非 OpenAI 官方项目。

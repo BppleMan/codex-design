@@ -14,13 +14,56 @@
 
 # Codex Design
 
-**Turn an idea into a high-fidelity, interactive prototype—and use it to define the product.**
+**Turn your idea into a high-fidelity, interactive prototype—and use it to define the product.**
 
-Codex Design is a **Codex Skill** for understanding intent, asking focused questions, building mock experiences, and refining them with the user in the browser. Its central deliverable is a product definition grounded in something people can actually use.
+Codex Design is a **Codex Skill** that understands your intent, asks focused questions in rounds, builds a working mock prototype, and refines functionality and visuals with you in the browser. Its central deliverable is a product definition grounded in something you can actually use.
 
-Start with a spark, a problem, an existing prototype, or a codebase. No complete PRD, existing repository, particular model, reasoning level, or frontend stack is required.
+Start with a spark, a problem, an existing prototype, or a codebase. No complete PRD, existing repository, particular model, reasoning level, or frontend stack is required. The product, workflows, visual direction, and simulator setup follow your goals.
 
-This repository contains the skill, focused reference guides, product-definition and implementation templates, and an **optional runnable React/TypeScript starter**. The starter demonstrates a feedback inbox in one local Web workbench; adapt its business behavior and visual direction to your product.
+## Have an AI agent install it
+
+Copy this entire prompt into Codex or an AI agent with local filesystem access. The installation target is your **Codex environment**; using the skill requires support for local skills and tools to run and review Web prototypes.
+
+```text
+Please actually install the Codex Design Skill for the current user:
+https://github.com/BppleMan/codex-design
+
+The repository root is the skill root. Prefer the skill installer available in this environment.
+Otherwise install the complete repository into Codex's skills/codex-design directory,
+respecting CODEX_HOME, or ~/.codex/skills/codex-design when it is unset.
+Keep supporting files including SKILL.md, agents, references, assets, and scripts.
+If the destination exists, inspect its origin and local changes first; do not overwrite or delete it.
+Verify SKILL.md and its local references, then report the actual installation path, source,
+and invocation, and explain how this Codex environment will load it.
+Report permission or environment limitations honestly; do not claim an incomplete installation succeeded.
+Only install the skill. Do not launch the bundled demo, install prototype npm dependencies,
+or start designing a product yet.
+```
+
+For manual installation or updating an existing copy, see the [installation guide](docs/installation.md).
+
+## Start with your idea
+
+Once the skill is loaded, tell Codex:
+
+```text
+Use $codex-design.
+My idea is: [describe your product, a problem you face, or a spark of an idea in your own words].
+First understand my goal, then grill me in rounds about the decisions that shape the product.
+Once the direction is clear, build a high-fidelity interactive prototype with mock data
+and let me operate and annotate it in the built-in browser.
+Work with me to refine the product boundary and visual design. No real backend yet.
+```
+
+You do not need to run an example project or choose a template first. Codex builds a prototype around the discussion; the project directory, frontend stack, and simulators follow the actual need.
+
+For an existing prototype:
+
+> Use $codex-design to continue this prototype. Preserve confirmed decisions, examine unresolved flows and visual questions, then refine it using my annotations.
+
+When a version is confirmed and you are ready to implement:
+
+> I approve [specific scope] in prototype [version]. Use $codex-design to translate that scope into the production project, preserving visuals, interactions, and state rules, and verify matching scenarios.
 
 ## The workflow
 
@@ -45,79 +88,6 @@ User participation continues throughout. Enter at the product's current maturity
 
 The skill does not create an annotation system inside your product. If built-in browser annotations are unavailable, use written feedback or screenshot locations and state that limitation.
 
-## Install
-
-Requirements: a Codex environment that can load local skills, permission to create and run a local Web project, and suitable frontend tooling. Browser review uses the browser capabilities available in that environment.
-
-**Check the destination first.** If it already exists, inspect its contents and installation method; do not overwrite it. For an unused destination:
-
-```sh
-git clone https://github.com/BppleMan/codex-design.git "${CODEX_HOME:-$HOME/.codex}/skills/codex-design"
-```
-
-The repository root contains `SKILL.md`; no subdirectory needs to be copied. Invoke `$codex-design` in a Codex session that has loaded the installed skill.
-
-If your environment provides a skill installer, you can instead ask:
-
-> Install the Codex skill from https://github.com/BppleMan/codex-design. Its SKILL.md is at the repository root.
-
-### Update a Git installation
-
-Use this only when the destination is the Git clone of this repository. Check its working tree first:
-
-```sh
-git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" status --short
-```
-
-Only when the working tree is clean:
-
-```sh
-git -C "${CODEX_HOME:-$HOME/.codex}/skills/codex-design" pull --ff-only
-```
-
-If there are local changes or Git cannot fast-forward, inspect and preserve that work before updating.
-
-## Try the runnable starter
-
-![The optional Codex Design workbench with linked macOS and iOS mock views](docs/images/prototype-workbench.png)
-
-From this repository, with Python 3 and Node.js 24+:
-
-```sh
-python3 scripts/create_prototype.py ../my-prototype --name "My product"
-cd ../my-prototype
-npm ci
-npm run dev -- --host 127.0.0.1
-```
-
-The initializer refuses existing destinations. Open the address Vite prints. Compare stable candidates, adjust visual parameters, switch mock scenarios, and optionally link Web/macOS/iOS/Android surfaces. Save experiments separately from reviewed scope confirmations; export baseline JSON and implementation Markdown, then import and restore without overwriting the original record.
-
-See the [verification record](docs/starter-verification.md) and [design notes](docs/design-notes.md).
-
-Read the [starter guide](assets/prototype-starter/README.md), [worked example](examples/feedback-inbox.md), and [handoff guide](references/handoff.md). Browser annotations still come from Codex. The starter uses no Claude-specific runtime or real backend. Its example interview assumptions are illustrative, not user approval.
-
-## Example prompts
-
-**From an idea**
-
-> Use $codex-design. I want to help freelance designers track client feedback. First understand the problem and grill me in rounds, then build a mock prototype we can review together. No real backend yet.
-
-**From an existing prototype**
-
-> Use $codex-design to continue this prototype. Keep the decisions we've confirmed, examine the workflow gaps, and ask about the important tradeoffs. Let me operate the revised interface in the built-in browser and refine it through annotations.
-
-**From a confirmed prototype to implementation**
-
-> I approve prototype v3 for onboarding and account settings. Use $codex-design to begin translating those flows into the existing application. Preserve the layout, visual hierarchy, interactions, and state behavior; verify the same scenarios and identify any native-platform differences.
-
-## A real case
-
-![Bridge Studio prototype showing linked plugin and Desktop simulators](docs/images/bridge-studio.jpg)
-
-Bridge Studio used linked mock simulators to clarify connections, identities, permissions, and lifecycle behavior. The [case notes](references/lessons-from-bridge-studio.md) explain the transferable lessons and their limits.
-
-This is a historical prototype example, not a bundled app or a universal layout template. Any custom annotation controls visible in the screenshot belong to an earlier implementation; this skill calls for Codex's built-in annotations.
-
 ## Boundaries
 
 - Mock behavior does not prove real API, network, authentication, payment, or native-host behavior.
@@ -126,22 +96,16 @@ This is a historical prototype example, not a bundled app or a universal layout 
 - Production integration starts when the user requests it against a confirmed scope.
 - The skill makes no fixed generation-speed promises and requires no specific model.
 
-## Repository guide
+## Further reading
 
-| Path | Purpose |
-| --- | --- |
-| [SKILL.md](SKILL.md) | Skill instructions and workflow boundaries |
-| [agents/openai.yaml](agents/openai.yaml) | Display metadata and suggested invocation |
-| [references/discovery.md](references/discovery.md) | Intent discovery and round-based questions |
-| [references/visual-and-browser-review.md](references/visual-and-browser-review.md) | Visual refinement and browser review |
-| [references/lessons-from-bridge-studio.md](references/lessons-from-bridge-studio.md) | Case evidence, counterexamples, and limits |
-| [assets/product-definition.template.md](assets/product-definition.template.md) | Product-definition template; not an application scaffold |
-| [assets/prototype-starter/](assets/prototype-starter/) | Optional runnable Web workbench and example |
-| [references/visual-exploration.md](references/visual-exploration.md) | Candidate comparisons, experiments and baselines |
-| [assets/implementation-spec.template.md](assets/implementation-spec.template.md) | Implementation evidence tied to a confirmed scope |
-| [scripts/create_prototype.py](scripts/create_prototype.py) | Copy the starter safely into a new project |
-| [scripts/validate.py](scripts/validate.py) | Repository validation |
-| [tests/](tests/) | Validator tests |
+Explore [visual directions](references/visual-exploration.md), [production translation](references/handoff.md), or the [product-definition template](assets/product-definition.template.md) as needed. [Cases and demonstrations](docs/examples.md) illustrate particular situations; their business models, palettes, and layouts do not limit what you can design.
+
+<details>
+<summary>Developer resources and optional starter</summary>
+
+[Skill instructions](SKILL.md) · [Discovery](references/discovery.md) · [Starter guide](references/prototype-workbench.md) · [Starter source](assets/prototype-starter/) · [Implementation template](assets/implementation-spec.template.md) · [Design notes](docs/design-notes.md) · [Verification record](docs/starter-verification.md)
+
+The starter is development material Codex can reuse when appropriate. You do not need to launch it to use the skill. The starter guide contains creation commands and customization points; the actual business model and visual design must follow the user's goals.
 
 ## Development and contributions
 
@@ -157,6 +121,8 @@ npm run build
 
 These checks validate package integrity and starter state/baseline behavior; they do not replace browser review or user design approval. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
 
+</details>
+
 ## License and credits
 
-Released under [Apache-2.0](LICENSE). An independent community project by [BppleMan](https://github.com/BppleMan), developed from the Bridge Studio prototyping practice; not an official OpenAI project.
+Released under [Apache-2.0](LICENSE). An independent community project maintained by [BppleMan](https://github.com/BppleMan); not an official OpenAI project.
