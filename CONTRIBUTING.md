@@ -13,7 +13,7 @@ Keep project-specific choices in examples. A successful color palette, framework
 ## Make a focused change
 
 - Keep `SKILL.md` concise. Put conditional detail in linked references.
-- Preserve the workflow: understand intent, ask questions in rounds, use a single mock Web project, involve the user throughout, refine visuals, and capture the product boundary.
+- Preserve the workflow: understand intent, judge whether clarification is needed (honoring explicit requests for deeper questioning), use a single mock Web project, involve the user throughout, refine visuals, and capture the product boundary.
 - Keep the synchronous-question rule and ordinary-message fallback intact. Do not introduce asynchronous question callbacks or polling as a substitute.
 - Reuse the host browser's annotation tools. A request for feedback does not imply permission to build a separate annotation product.
 - Distinguish code checks, browser evidence, user approval, and native-platform validation.

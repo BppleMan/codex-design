@@ -16,7 +16,7 @@
 
 **Turn your idea into a high-fidelity, interactive prototype—and use it to define the product.**
 
-Codex Design is a **Codex Skill** that understands your intent, asks focused questions in rounds, builds a working mock prototype, and refines functionality and visuals with you in the browser. Its central deliverable is a product definition grounded in something you can actually use.
+Codex Design is a **Codex Skill** that understands your intent, clarifies key questions when needed, builds a working mock prototype, and refines functionality and visuals with you in the browser. Its central deliverable is a product definition grounded in something you can actually use.
 
 Start with a spark, a problem, an existing prototype, or a codebase. No complete PRD, existing repository, particular model, reasoning level, or frontend stack is required. The product, workflows, visual direction, and simulator setup follow your goals.
 
@@ -47,13 +47,11 @@ For manual installation or updating an existing copy, see the [installation guid
 Once the skill is loaded, tell Codex:
 
 ```text
-Use $codex-design.
-My idea is: [describe your product, a problem you face, or a spark of an idea in your own words].
-First understand my goal, then grill me in rounds about the decisions that shape the product.
-Once the direction is clear, build a high-fidelity interactive prototype with mock data
-and let me operate and annotate it in the built-in browser.
-Work with me to refine the product boundary and visual design. No real backend yet.
+Use $codex-design. I want to make: [describe your product idea or problem in your own words].
+Help me turn it into an interactive prototype, without a real backend for now.
 ```
+
+Just express your idea. Codex uses the available context to decide whether questions are needed: it starts directly when the brief is clear enough and asks when a missing decision would change the design.
 
 You do not need to run an example project or choose a template first. Codex builds a prototype around the discussion; the project directory, frontend stack, and simulators follow the actual need.
 
@@ -70,7 +68,7 @@ When a version is confirmed and you are ready to implement:
 User participation continues throughout. Enter at the product's current maturity; keep decisions that are already settled.
 
 1. **Understand the intent.** Establish the audience, problem, situation, and desired outcome. Where relevant, inspect existing implementation and distinguish it from expectations and assumptions.
-2. **Grill in rounds.** Ask a few questions about consequential behavior and tradeoffs, then let the answers shape the next round. Use a permitted synchronous native question tool and wait for its answers. When unavailable in the current mode, ask in chat and wait for the user's next reply.
+2. **Decide whether to ask.** Start designing when the brief is clear enough; clarify specific consequential gaps, or ask in rounds when several product choices depend on each other. Honor an explicit request for grill-me. When asking, use a permitted synchronous native question tool and wait for the answers; if unavailable, ask in chat and wait for the next reply.
 3. **Build one Web prototype.** Simulate the needed Web, macOS, iOS, Android, plugin, or other host interfaces in one project. One simulator may be enough; related simulators share mock state. Keep scenario controls outside the simulated product.
 4. **Review and refine together.** Run the prototype in Codex's built-in browser. Use its built-in annotations, then make focused changes. Explicitly review color, typography, density, hierarchy, and key states; preserve what the user has accepted.
 5. **Keep defining the product.** Update scope, object relationships, permissions, flows, recovery behavior, visual decisions, and unresolved assumptions alongside the prototype.
@@ -103,7 +101,7 @@ Explore [visual directions](references/visual-exploration.md), [production trans
 <details>
 <summary>Developer resources and optional starter</summary>
 
-[Skill instructions](SKILL.md) · [Discovery](references/discovery.md) · [Starter guide](references/prototype-workbench.md) · [Starter source](assets/prototype-starter/) · [Implementation template](assets/implementation-spec.template.md) · [Design notes](docs/design-notes.md) · [Verification record](docs/starter-verification.md)
+[Skill instructions](SKILL.md) · [Discovery](references/discovery.md) · [Starter guide](references/prototype-workbench.md) · [Starter source](assets/prototype-starter/) · [Implementation template](assets/implementation-spec.template.md) · [Design notes](docs/design-notes.md) · [Verification record](docs/starter-verification.md) · [Discovery behavior checks](docs/discovery-verification.md)
 
 The starter is development material Codex can reuse when appropriate. You do not need to launch it to use the skill. The starter guide contains creation commands and customization points; the actual business model and visual design must follow the user's goals.
 

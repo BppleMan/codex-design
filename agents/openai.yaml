@@ -1,4 +1,4 @@
 interface:
   display_name: "Codex Design"
   short_description: "从想法出发，以高保真可交互原型共同推敲功能边界与视觉体验"
-  default_prompt: "用 $codex-design 吃透我的想法，通过分轮 grill-me 和可交互原型，与我一起确定产品功能边界、交互行为和视觉方向；本轮不接真实后端。"
+  default_prompt: "用 $codex-design 帮我把这个想法做成高保真可交互原型，与我一起完善功能边界、交互和视觉；本轮不接真实后端。"
