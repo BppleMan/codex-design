@@ -123,4 +123,6 @@ These checks validate package integrity and starter state/baseline behavior; the
 
 ## License and credits
 
+Maintainers can [update an Agensi listing automatically from GitHub Releases](docs/agensi-publishing.md).
+
 Released under [Apache-2.0](LICENSE). An independent community project maintained by [BppleMan](https://github.com/BppleMan); not an official OpenAI project.

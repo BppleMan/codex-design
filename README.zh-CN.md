@@ -121,4 +121,6 @@ npm run build
 
 ## 许可证与致谢
 
+维护者可以[发布 GitHub Release 后自动更新 Agensi 商品](docs/agensi-publishing.md)。
+
 采用 [Apache-2.0](LICENSE) 许可证。由 [BppleMan](https://github.com/BppleMan) 维护的独立社区项目，并非 OpenAI 官方项目。
