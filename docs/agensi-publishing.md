@@ -15,6 +15,10 @@ In **Settings → Secrets and variables → Actions**, configure:
 
 在仓库 Actions 设置中保存上述配置。密钥只用于请求认证，不进入发布包或日志。商品标识必须对应该账号拥有的已有商品；工作流不创建商品或修改价格。
 
+If the listing has not been created yet, leave `AGENSI_SKILL_SLUG` unset. Releases still run validation, and the upload step records a clear skipped result. After creating the listing, set its actual slug to enable automatic updates without changing the workflow.
+
+商品尚未创建时，保留 `AGENSI_SKILL_SLUG` 为空。Release 仍执行校验，上传步骤明确标记为跳过；商品创建后填入真实 slug 即可启用更新，无需再次修改工作流。
+
 The endpoint is `https://mcp.agensi.io/mcp`. The publisher uses Streamable HTTP JSON-RPC, accepts JSON and SSE, and sends the full text package rather than a ZIP. Binary repository images keep working through immutable GitHub commit URLs. Listing logos and screenshots can be managed separately using `upload_skill_media`.
 
 发布脚本发送完整文本包。二进制图片保留在 GitHub，包内 Markdown/HTML 图片链接改为对应提交的固定 URL；商品媒体可以单独管理。原型脚本、参考文档、前端资源、依赖锁定文件和许可证随包保留。
