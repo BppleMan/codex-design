@@ -45,4 +45,8 @@ Updates are serialized. The publisher does not automatically retry the non-idemp
 
 工作流串行提交更新，不自动重试。如果请求发出后连接失败，先查看 Creator Studio 中的版本状态，再决定是否重跑，避免重复提交。
 
+Agensi can return a plain-text business error without setting MCP `isError`. Such responses fail the workflow with the server's diagnostic; they are never treated as a successful update. HTTP authentication alone does not confirm that the account's creator profile or an actual upload works.
+
+Agensi 可能返回纯文本业务错误而不设置 MCP `isError`。脚本会保留诊断信息并让工作流失败，不将这类响应记为更新成功。HTTP 认证通过仍需继续确认创作者资料可读取，并在已有商品上验证实际上传。
+
 References: [Agensi MCP tools](https://www.agensi.io/mcp) · [MCP setup](https://www.agensi.io/docs/mcp-setup) · [GitHub Release events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#release)

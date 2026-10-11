@@ -159,7 +159,11 @@ class AgensiClient:
             try:
                 payload = json.loads(text)
             except json.JSONDecodeError:
-                raise RuntimeError("Agensi returned an unstructured tool response; verify the result in Creator Studio") from None
+                detail = text.strip().replace(self.key, "[redacted]")[:2000]
+                raise RuntimeError(
+                    f"Agensi {name} returned an unstructured tool response: {detail or '(empty response)'}; "
+                    "verify the result in Creator Studio"
+                ) from None
         if not isinstance(payload, dict):
             raise RuntimeError("Agensi returned an unexpected tool result")
         if (payload.get("error") or payload.get("success") is False

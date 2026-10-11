@@ -126,6 +126,15 @@ class ProtocolTests(unittest.TestCase):
         with patch.object(client, "request", return_value={"content": [{"type": "text", "text": '{"status":"pending"}'}]}):
             self.assertEqual(client.call("update_skill", {}), {"status": "pending"})
 
+    def test_profile_failure_without_is_error_preserves_the_diagnostic(self):
+        client = publish.AgensiClient("secret-token")
+        response = {"content": [{"type": "text", "text":
+            "We couldn't load your Agensi profile. Try again in a moment. secret-token"}]}
+        with patch.object(client, "request", return_value=response):
+            with self.assertRaisesRegex(RuntimeError, "couldn't load your Agensi profile") as failure:
+                client.call("update_skill", {})
+        self.assertNotIn("secret-token", str(failure.exception))
+
     def test_release_text_is_data_not_shell_code(self):
         label, body = publish.release_details({"release": {"tag_name": "v1.1.0", "body": "Use `$value` and $(literal).\nSecond line."}}, None)
         self.assertEqual(label, "v1.1.0")
