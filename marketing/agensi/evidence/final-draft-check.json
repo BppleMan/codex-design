@@ -1,0 +1,42 @@
+{
+  "all_changes_saved": true,
+  "gallery": [
+    {
+      "alt": "Screenshot 1",
+      "loaded": true,
+      "src": "https://geeduzbsatvodnlijqfs.supabase.co/storage/v1/object/public/product-media/69836a39-4ab4-4ed9-ac59-31de87ddc660/screenshots/1791732537418-t2zb.png",
+      "local_file": "../media/01-overview.png"
+    },
+    {
+      "alt": "Screenshot 2",
+      "loaded": true,
+      "src": "https://geeduzbsatvodnlijqfs.supabase.co/storage/v1/object/public/product-media/69836a39-4ab4-4ed9-ac59-31de87ddc660/screenshots/1791732539120-wpyy.png",
+      "local_file": "../media/02-workflow.png"
+    },
+    {
+      "alt": "Screenshot 3",
+      "loaded": true,
+      "src": "https://geeduzbsatvodnlijqfs.supabase.co/storage/v1/object/public/product-media/69836a39-4ab4-4ed9-ac59-31de87ddc660/screenshots/1791732541085-bycr.png",
+      "local_file": "../media/03-behavior.png"
+    },
+    {
+      "alt": "Screenshot 4",
+      "loaded": true,
+      "src": "https://geeduzbsatvodnlijqfs.supabase.co/storage/v1/object/public/product-media/69836a39-4ab4-4ed9-ac59-31de87ddc660/screenshots/1791732542096-zoqh.png",
+      "local_file": "../media/04-contexts.png"
+    },
+    {
+      "alt": "Screenshot 5",
+      "loaded": true,
+      "src": "https://geeduzbsatvodnlijqfs.supabase.co/storage/v1/object/public/product-media/69836a39-4ab4-4ed9-ac59-31de87ddc660/screenshots/1791732543120-ctjs.png",
+      "local_file": "../media/05-deliverables.png"
+    }
+  ],
+  "illustrative_demo_visible": true,
+  "logo_loaded": true,
+  "price": "9.99",
+  "title": "Codex Design",
+  "unverified_code_artifact_visible": true,
+  "observed_on": "2026-10-11",
+  "listing_state": "unsubmitted_draft"
+}

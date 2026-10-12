@@ -23,7 +23,9 @@ The endpoint is `https://mcp.agensi.io/mcp`. The publisher uses Streamable HTTP 
 
 发布脚本发送完整文本包。二进制图片保留在 GitHub，包内 Markdown/HTML 图片链接改为对应提交的固定 URL；商品媒体可以单独管理。原型脚本、参考文档、前端资源、依赖锁定文件和许可证随包保留。
 
-Only Git-tracked files are collected. GitHub workflows, repository tests and the publisher are omitted. Unexpected binaries, symlinks and tracked environment files fail the build. The publisher conservatively enforces the documented submit limit of 100 files / 5 MiB for updates as well.
+Only Git-tracked files are collected. GitHub workflows, repository tests, the publisher and `marketing/` listing materials are omitted. Unexpected binaries, symlinks and tracked environment files fail the build. The publisher conservatively enforces the documented submit limit of 100 files / 5 MiB for updates as well.
+
+商品文案、Logo、图库原件和草稿预览保存在仓库的 `marketing/agensi/`。`marketing/` 不进入自动更新的 Skill 文本包，并通过 `.gitattributes` 从 `git archive` 导出的安装包排除；商品图片仍单独上传到 Agensi。
 
 ## Verify without updating / 不上传的检查
 

@@ -1,0 +1,70 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "id": "logo",
+      "file": "codex-design-logo.png",
+      "prompt": "Use case: logo-brand. Create ONE polished square product logo for Codex Design, an independent skill for defining products through interactive prototypes before implementation. The logo must be a simple memorable abstract mark: two precisely aligned, interlocking viewport-like frames, one an open prototype contour and the other a solid finished plane, forming a unified aperture with bold negative space. It should express design becoming real, with a slight sense of tactile layered depth, crisp controlled geometry, and a strong silhouette at 48 pixels. Sophisticated contemporary design-tool identity. Use the product's established violet accent with warm ivory and graphite; clean quiet square ivory background. Center one large mark with generous padding for rounded and circular crops. No wordmark, no letters, no text, no stock cube, no robot, no sparkle, no brain, no branded third-party symbols, no watermark, no collage. Produce the logo asset itself, not a logo presentation sheet or mockup. Square, 1024x1024.",
+      "generated_output": "exec-11b0797c-f9d6-48d8-a047-f152c39ec296.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1260029,
+      "sha256": "cbd810d994ed5d089fa1e24f3cd73de48c30a5608ba0fd1223556bd326387a7b"
+    },
+    {
+      "id": "01-overview",
+      "file": "01-overview.png",
+      "prompt": "Image 1 is the exact product logo and brand style reference. Preserve the recognizable violet-and-graphite interlocking frame mark when placing the small logo. Create ONE finished landscape 3:2 marketplace gallery graphic for Codex Design, 1536x1024. Premium editorial design-tool identity: warm ivory canvas, near-black large sans-serif typography, violet accents, generous whitespace, crisp modular grids, subtly tactile layered panels, restrained soft shadows. The visual is a promotional concept illustration, not an actual screenshot or an actual user session. Render all specified text exactly, legibly, and with a clear hierarchy. Include the small brand name \"CODEX DESIGN\" with the logo and a visible bottom caption \"Concept illustration\". No third-party logos, no UI pretending to be the Codex app, no ratings, no testimonials, no price, no speed claims, no watermark, no stock-photo people.\nUse case: ads-marketing. Hero overview. Large headline exactly \"Design first.\\nCode follows.\" Supporting line exactly \"Turn an idea into a product you can explore.\" Smaller descriptor exactly \"Interactive prototypes · Product definition\". Build a sophisticated abstract scene of three aligned prototype planes: one a spare sketch contour, one a polished but clearly conceptual interface plane, and one a clean product-definition panel. Their geometry echoes the reference logo. The headline dominates the composition with ample negative space; the layered planes show the progression from intent to design to implementation. No tiny fake interface text; use simple blocks and clear visual hierarchy. Make this an attractive cover image with enough substance to communicate the product, not generic AI art.",
+      "generated_output": "exec-49fa482e-5f7b-4eb4-843d-aad8e38492fa.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1673524,
+      "sha256": "8388be2973586f37424760fda9654a17a78f34e2579be277b3a767750f4806dc"
+    },
+    {
+      "id": "02-workflow",
+      "file": "02-workflow.png",
+      "prompt": "Image 1 is the exact product logo and brand style reference. Preserve the recognizable violet-and-graphite interlocking frame mark when placing the small logo. Create ONE finished landscape 3:2 marketplace gallery graphic for Codex Design, 1536x1024. Premium editorial design-tool identity: warm ivory canvas, near-black large sans-serif typography, violet accents, generous whitespace, crisp modular grids, subtly tactile layered panels, restrained soft shadows. The visual is a promotional concept illustration, not an actual screenshot or an actual user session. Render all specified text exactly, legibly, and with a clear hierarchy. Include the small brand name \"CODEX DESIGN\" with the logo and a visible bottom caption \"Concept illustration\". No third-party logos, no UI pretending to be the Codex app, no ratings, no testimonials, no price, no speed claims, no watermark, no stock-photo people.\nUse case: productivity-visual. A beautifully designed workflow infographic. Headline exactly \"A workflow built around you.\" Five connected stages in a clear horizontal sequence, each in its own elegant card with a simple icon. Stage titles and one-line descriptions, exactly: \"Understand\" / \"Start with an idea\"; \"Prototype\" / \"Explore mock behavior\"; \"Refine\" / \"Review in the browser\"; \"Define\" / \"Capture product decisions\"; \"Implement\" / \"Build when you choose\". A restrained curved feedback path visually links Refine back to Prototype, conveying ongoing user participation. Keep stage labels large and easy to read, with a deliberate hierarchy and precise alignment. Show design craft through whitespace, line weight and spacing rather than decorative clutter. No additional process stages or extra text.",
+      "generated_output": "exec-e7b20e6d-22ac-4983-b26d-c319ad1db8fa.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1592154,
+      "sha256": "3b676f71ff6d6bd34fb2d6ce32be96d23100cb0ad3b2f78ab66f84c6f0c8dafa"
+    },
+    {
+      "id": "03-behavior",
+      "file": "03-behavior.png",
+      "label": "交互状态图",
+      "prompt": "Image 1 is the exact product logo and brand style reference. Preserve the recognizable violet-and-graphite interlocking frame mark when placing the small logo. Create ONE finished landscape 3:2 marketplace gallery graphic for Codex Design, 1536x1024. Premium editorial design-tool identity: warm ivory canvas, near-black large sans-serif typography, violet accents, generous whitespace, crisp modular grids, subtly tactile layered panels, restrained soft shadows. The visual is a promotional concept illustration, not an actual screenshot or an actual user session. Render all specified text exactly, legibly, and with a clear hierarchy. Include the small brand name \"CODEX DESIGN\" with the logo and a visible bottom caption \"Concept illustration\". No third-party logos, no UI pretending to be the Codex app, no ratings, no testimonials, no price, no speed claims, no watermark, no stock-photo people.\nUse case: ui-mockup. A marketing concept graphic explaining interaction design. Large headline exactly \"Design the behavior.\\nThen refine the surface.\" Four beautifully crafted conceptual interface panels in a carefully spaced 2x2 arrangement. Clearly labeled states and minimal real text exactly: \"Empty\" with \"Nothing here yet\" and a \"Create\" action; \"Loading\" with \"Loading...\" and skeleton shapes; \"Failure\" with \"Could not load\" and a \"Try again\" action; \"Recovery\" with \"You're back on track\". These are clearly simplified mock-state illustrations, not screenshots from an actual product. Use a coherent design language across all four panels, with meaningful differences in state. Caption exactly \"Mock states · Reproducible scenarios\". Keep all key words large and legible. Show polished typography and interaction states rather than a decorative pile of windows.",
+      "generated_output": "exec-184b1a07-0198-4492-aa66-096c0324addc.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1412161,
+      "sha256": "4259c14ef2abfeb643f64f582dbe40dad736f22061aa01f74fb6cbcdc978acb6"
+    },
+    {
+      "id": "04-contexts",
+      "file": "04-contexts.png",
+      "label": "多端模拟图",
+      "prompt": "Image 1 is the exact product logo and brand style reference. Preserve the recognizable violet-and-graphite interlocking frame mark when placing the small logo. Create ONE finished landscape 3:2 marketplace gallery graphic for Codex Design, 1536x1024. Premium editorial design-tool identity: warm ivory canvas, near-black large sans-serif typography, violet accents, generous whitespace, crisp modular grids, subtly tactile layered panels, restrained soft shadows. The visual is a promotional concept illustration, not an actual screenshot or an actual user session. Render all specified text exactly, legibly, and with a clear hierarchy. Include the small brand name \"CODEX DESIGN\" with the logo and a visible bottom caption \"Concept illustration\". No third-party logos, no UI pretending to be the Codex app, no ratings, no testimonials, no price, no speed claims, no watermark, no stock-photo people.\nUse case: infographic-diagram. Large headline exactly \"One Web prototype.\\nMultiple product contexts.\" A coherent visual diagram of one main browser canvas containing several related host simulations: a desktop window, two distinct mobile interface panels, and a compact plugin panel. Use abstract interface blocks and connecting lines to imply shared mock state. The exact context labels are \"Web\", \"macOS\", \"iOS\", \"Android\", \"Plugins\", with no brand logos. A discreet main-canvas label exactly \"One Web project\". Bottom supporting line exactly \"Host interfaces are simulated in the browser.\" The diagram must communicate that these are simulated host interfaces inside one Web project, not a promise of shipping native apps. Keep geometry clean, labels easy to read, and all panels consistent with the reference brand. No tiny invented interface text.",
+      "generated_output": "exec-cd93c78f-989a-46f2-af3d-689dee594531.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1484504,
+      "sha256": "fcd84fcfafa85c76b89f1d68280fb6f82d64c26d256ba38f6b73659d3e622a68"
+    },
+    {
+      "id": "05-deliverables",
+      "file": "05-deliverables.png",
+      "label": "交付成果图",
+      "prompt": "Image 1 is the exact product logo and brand style reference. Preserve the recognizable violet-and-graphite interlocking frame mark when placing the small logo. Create ONE finished landscape 3:2 marketplace gallery graphic for Codex Design, 1536x1024. Premium editorial design-tool identity: warm ivory canvas, near-black large sans-serif typography, violet accents, generous whitespace, crisp modular grids, subtly tactile layered panels, restrained soft shadows. The visual is a promotional concept illustration, not an actual screenshot or an actual user session. Render all specified text exactly, legibly, and with a clear hierarchy. Include the small brand name \"CODEX DESIGN\" with the logo and a visible bottom caption \"Concept illustration\". No third-party logos, no UI pretending to be the Codex app, no ratings, no testimonials, no price, no speed claims, no watermark, no stock-photo people.\nUse case: productivity-visual. Large headline exactly \"Leave with more than screens.\" Display four purposeful, beautifully composed artifact cards: \"Runnable prototype\" with supporting line \"Shared mock behavior\"; \"Product definition\" with \"Scope and decisions\"; \"Visual decisions\" with \"Confirmed visual direction\"; \"Implementation references\" with \"Screens, states and flows\". Use visual metaphors for an interactive browser, a structured product document, a restrained set of design tokens, and a clean screen-to-implementation map. These must read as conceptual deliverables, not actual customer output. Emphasize useful concrete artifacts and a disciplined workflow. A strong secondary line exactly \"Build from a confirmed design.\" The four cards should form a balanced editorial composition with lots of whitespace and very legible typography. No extra claims or invented metrics.",
+      "generated_output": "exec-17de5d2c-c8a5-4651-9bd4-279da900f72b.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1568021,
+      "sha256": "beec1c782bbc262b78fbb52e103e6d57d359fa2aca9e36981810b1d5aff0dc52"
+    }
+  ],
+  "created_on": "2026-10-11",
+  "gallery_kind": "concept_illustration"
+}

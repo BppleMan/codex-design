@@ -50,6 +50,20 @@ class PackageTests(unittest.TestCase):
         self.assertEqual(images, ["docs/images/demo.png"])
         self.assertNotIn("docs/images/demo.png", {f["path"] for f in files})
 
+    def test_listing_materials_stay_out_of_the_skill_package(self):
+        self.write("marketing/agensi/README.md", "Listing materials.")
+        self.write("marketing/agensi/media/logo.png", b"\x89PNG\r\n\x1a\n\x00")
+        self.write("marketing/agensi/media-bundle.zip", b"PK\x00")
+        self.write("README.md", "[Listing materials](marketing/agensi/README.md)")
+        files, images = self.package()
+        self.assertEqual({f["path"] for f in files}, {"SKILL.md", "README.md"})
+        self.assertEqual(images, [])
+        readme = next(f["content"] for f in files if f["path"] == "README.md")
+        self.assertIn(
+            f"https://raw.githubusercontent.com/BppleMan/codex-design/{'a' * 40}/marketing/agensi/README.md",
+            readme,
+        )
+
     def test_tracked_environment_file_is_rejected(self):
         self.write(".env.production", "SECRET=private")
         with self.assertRaisesRegex(ValueError, "environment file"):

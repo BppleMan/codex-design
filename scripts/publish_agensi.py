@@ -32,7 +32,7 @@ def build_package(root: Path, repository: str, revision: str) -> tuple[list[dict
     files: dict[Path, str] = {}
     images: set[Path] = set()
     for relative in paths:
-        if relative.parts[0] in {".github", "tests"} or relative == Path("scripts/publish_agensi.py"):
+        if relative.parts[0] in {".github", "tests", "marketing"} or relative == Path("scripts/publish_agensi.py"):
             continue
         source = root / relative
         if source.is_symlink() or not source.resolve().is_relative_to(root):
