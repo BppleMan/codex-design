@@ -1,0 +1,22 @@
+{
+  "name": "Codex Design",
+  "summary": "Turn ideas into interactive prototypes, refine them in the browser, and define the product before coding.",
+  "description_file": "listing-description.en.md",
+  "demo_file": "listing-demo.en.md",
+  "demo_prompt": "I have an idea for a cross-platform task manager that uses a 'local-first' sync logic. I need to figure out how the conflict resolution UI looks on both iOS and Desktop.",
+  "faq_file": "listing-faq.en.json",
+  "settings_file": "listing-settings.en.json",
+  "logo_file": "media/codex-design-logo.png",
+  "gallery_files": [
+    "media/01-overview.png",
+    "media/02-workflow.png",
+    "media/03-behavior.png",
+    "media/04-contexts.png",
+    "media/05-deliverables.png"
+  ],
+  "pricing": {
+    "model": "one_time",
+    "amount": "9.99",
+    "currency": "USD"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What does Codex Design help me create?",
+    "answer": "A high-fidelity, interactive Web prototype and a product definition grounded in that prototype. Codex Design guides the work from understanding the idea through interaction and visual refinement, with user feedback throughout."
+  },
+  {
+    "question": "What is included in the download?",
+    "answer": "The complete skill instructions, reference guides, product-definition and implementation templates, an optional React/TypeScript prototype starter, creation and validation scripts, examples, images, and installation documentation. The core instructions are in Chinese, with English and Chinese supporting documentation."
+  },
+  {
+    "question": "Do I need a complete PRD to start?",
+    "answer": "No. Start with an idea, a problem, a reference, an existing prototype, or a codebase. Codex uses the available context to decide whether to start designing or ask about decisions that would change the product. You can also explicitly request a deeper interview."
+  },
+  {
+    "question": "Can it simulate desktop, mobile, and plugin experiences?",
+    "answer": "Yes. The skill guides Codex to build the relevant Web, macOS, iOS, Android, plugin, or other host simulations inside one Web project. Related views can share mock state. These are browser simulations, not native applications or proof of device behavior."
+  },
+  {
+    "question": "What happens after a prototype is confirmed?",
+    "answer": "Record the confirmed version and scope, then explicitly ask to begin implementation. Codex Design guides the translation of screens, components, interactions, state rules, and business boundaries into the target application, with comparisons against the same prototype scenarios."
+  }
+]

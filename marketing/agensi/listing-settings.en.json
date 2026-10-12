@@ -1,0 +1,24 @@
+{
+  "compatibility": "Designed for Codex environments with local skill support, file and command access, and tools to run and review Web prototypes. Core skill instructions are in Chinese, with English and Chinese documentation. The optional bundled React/TypeScript starter requires Node.js 24+. Other agent environments have not been independently validated.",
+  "permissions": {
+    "tools": [
+      "Terminal / Shell",
+      "Read Files",
+      "Write Files",
+      "Browser",
+      "Network Access"
+    ],
+    "environment_variables": false,
+    "required_service_connections": [],
+    "packaged_support_file_scopes": [
+      "agents/**",
+      "assets/**",
+      "docs/**",
+      "examples/**",
+      "references/**",
+      "scripts/**"
+    ],
+    "notes": "Reads the installed skill and relevant files in the workspace you select; writes prototype and product-definition files in that workspace. Runs local development commands and opens the prototype for browser review. Network access may be used for frontend dependency installation or references you request. No additional third-party account connection or API key is required by the skill. File-scope patterns above describe the packaged support folders; the actual project/prototype directory is chosen with the user."
+  },
+  "known_limitations": "The prototype phase uses frontend mock behavior. Simulated host interfaces and browser checks do not verify live backend services or native-device behavior. Production translation starts when the user explicitly requests it for a confirmed version and scope. Browser annotations depend on the capabilities of the Codex environment; written or screenshot feedback can be used when they are unavailable."
+}

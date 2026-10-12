@@ -5,3 +5,5 @@
 *.yaml text eol=lf
 *.svg text eol=lf
 *.jpg binary
+*.png binary
+/marketing/ export-ignore
